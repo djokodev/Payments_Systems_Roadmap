@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 transactions = [ 
     {"amount": 5000, "type": "send", "wallet_id": "CM_001"}, 
     {"amount": 15000, "type": "send", "wallet_id": "CM_002"}, 
@@ -12,7 +13,6 @@ transactions = [
 
 
 # Etape 1: Version avec une boucle for classique et setdefault
-"""
 def synthese_rapport_by_wallet(transactions):
     
     final_rapport = {}
@@ -25,12 +25,9 @@ def synthese_rapport_by_wallet(transactions):
     print(final_rapport)
 
 
-synthese_rapport_by_wallet(transactions)
-"""
 
 
 # Étape 2: Réécris avec defaultdict(int) depuis collections.
-"""
 def synthese_rapport_by_wallet(transactions):
     
     final_rapport = defaultdict(int)
@@ -42,8 +39,6 @@ def synthese_rapport_by_wallet(transactions):
     print(final_rapport)
 
 
-synthese_rapport_by_wallet(transactions)
-"""
 
 
 # Étape 3: modifie ta fonction pour qu'elle retourne avec le nombre de transactions par wallet.
@@ -56,6 +51,3 @@ def synthese_rapport_by_wallet(transactions):
         final_rapport[wallet]["count"] += 1
 
     print(final_rapport)
-
-
-synthese_rapport_by_wallet(transactions)
