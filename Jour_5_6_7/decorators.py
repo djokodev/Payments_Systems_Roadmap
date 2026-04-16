@@ -1,6 +1,7 @@
 import functools
 import time
 
+
 def log_execution(func):
     @functools.wraps(func)
     def wrapper_log_execution(*args, **kwargs):
@@ -17,7 +18,6 @@ def log_execution(func):
         print(f"le temps d'execution de la fonction est de {t}s")
 
         return result_of_func
-
 
 
 def retry(max_attempts):
